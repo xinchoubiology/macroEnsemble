@@ -1,10 +1,10 @@
 ---
 layout: news_item
-title: 'Welcome to new Jekyll'
+title: 'About the sytax highlight in my Blog'
 date: 2014-02-07 17:43:32 -0800
 permalink: /news/Sytax-Highlight
 author: xinchoubiology
-version: Welcome to new Jekyll
+version: About the sytax highlight in my Blog
 prev_section: LaTex-plugin
 categories: [release]
 ---
