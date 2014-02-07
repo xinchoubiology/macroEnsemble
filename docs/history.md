@@ -4,7 +4,7 @@ title: History
 permalink: "/docs/history/"
 ---
 
-## Integrate Jekyll with $\LATEX$
+## Integrate Jekyll with $\LaTeX$
 
 - The 1st Blogs posted on this blog
 
