@@ -1,0 +1,21 @@
+<div class="unit one-fifth hide-on-mobiles">
+  <aside>
+    <ul>
+      <li class="{% if page.title == 'News' %}current{% endif %}">
+        <a href="/news/">Gallary</a>
+      </li>
+    </ul>
+    <h4>Recent Releases</h4>
+    <ul>
+      {% for post in site.posts limit:3 %}
+      <li class="{% if page.title == post.title %}current{% endif %}">
+        <a href="{{ post.url }}">{{ post.version }}</a>
+        <HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="150%" color="grey" SIZE=1>
+      </li>
+      {% endfor %}
+      <li>
+        <a href="/docs/history/">History »</a>
+      </li>
+    </ul>
+  </aside>
+</div>
