@@ -20,12 +20,26 @@ categories: [release]
 这样我们就可以针对不同的语言进行相应的语法高亮了。
 In addition，the language highlighter `pygments` support `Bash`,`Python`,`Html`,`Ruby` and so on.
 
-{% highlight python %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+> 例如，这是一个关于Rcpp的求卷积(convolution)的Rcpp操作：
+	$y[n]=f[n]*g[n]=\sum^{M-1}_{m=0}{f[n-m]g[m]}$
+	得到的R code 如下: ...
+
+{% highlight cpp%}
+src <- '
+  Rcpp::NumericVector xa(a);
+  Rcpp::NumericVector xb(b);
+  int n_xa = xa.size(), n_xb = xb.size();
+  
+  Rcpp::NumericVector xab(n_xa + n_xb - 1);
+  for(int i = 0; i < n_xa; i++)
+    for(int j = 0; j < n_xb; j++)
+      xab[i+j] += xa[i] * xb[j];
+  
+  return(xab); 
+'
+suppressMessages(require(inline))
+f <- cxxfunction(signature(a="numeric", b="numeric"), src, plugin="Rcpp", verbose=TRUE)
+
 {% endhighlight %}
 
 
