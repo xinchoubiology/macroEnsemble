@@ -121,6 +121,16 @@
   max-width: 400px;
 }
 
+.post-content-truncate p{
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
+  font-size: 18.75px;
+}
+
+.post-content {
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
+  font-size: 18.75px;
+}
+
 
 /* Expand the wrap a bit further on larger screens */
 /*@media screen and (min-width: 1180px) {
