@@ -101,6 +101,27 @@
   }
 }
 
+/* post content list on paper must have read more */
+.post-content-truncate h1 {
+  font-size: 33.75px;
+  color: #333;
+}
+
+.post-content-truncate h2 {
+  font-size: 26.25px;
+  color: #333;
+}
+
+.post-content-truncate h3 {
+  font-size: 18.75px;
+  color: #333;
+}
+
+.post-content-truncate img {
+  max-width: 400px;
+}
+
+
 /* Expand the wrap a bit further on larger screens */
 /*@media screen and (min-width: 1180px) {
   .wrap .grid {

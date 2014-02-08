@@ -17,7 +17,15 @@
       {{ post.author }}
     </a>
   </div>
-  <div class="post-content">
-    {{ post.content }}
+  <div class="post-content-truncate">
+    {% if post.content contains "<!-- more -->" %}
+      {{ post.content | split:"<!-- more -->" | first % }}
+    {% else %}
+      {{post.content | strip_html | trucatewords : 100}}
+    {% endif %}
+    <div>
+    <br>
+    <a href="{{site.baseurl}}{{ post.url }}", class="btn">read more ...</a> 
+    </div>
   </div>
 </article>
