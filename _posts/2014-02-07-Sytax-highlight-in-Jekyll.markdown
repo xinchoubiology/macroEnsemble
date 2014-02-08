@@ -10,9 +10,12 @@ categories: [release]
 ---
 
 我们基于Mac OSX的brew库，获得对Jekyll的语法高亮支持：
+
 {% highlight bash %}
 ~ $ gem install pygments
 {% endhighlight %}
+
+<!-- more -->
 
 这样我们就可以针对不同的语言进行相应的语法高亮了。
 In addition，the language highlighter `pygments` support `Bash`,`Python`,`Html`,`Ruby` and so on.
