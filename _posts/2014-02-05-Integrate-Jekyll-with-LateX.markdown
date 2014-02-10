@@ -5,8 +5,8 @@ date: 2014-02-05 17:43:32 -0800
 permalink: /news/LaTex-plugin
 author: xinchoubiology
 version: LaTex plugin
-next_section: Sytax-Highlight
-categories: [release]
+prev_section: Sytax-Highlight
+categories: [Webdev & Tools]
 ---
 
 如果可以的话，最佳的方案应该是自己写相关的公式渲染插件，例如我们知道<a href="https://github.com/be5invis/eido">Eido</a>这个工具。但是，由于原作者自己几年过去了，仍然没有补充合适的`README.md`或者`Example`.这让我不得不在 "让网站开始工作的有效性" 和 

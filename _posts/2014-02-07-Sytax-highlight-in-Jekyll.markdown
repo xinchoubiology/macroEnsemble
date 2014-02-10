@@ -5,8 +5,8 @@ date: 2014-02-07 17:43:32 -0800
 permalink: /news/Sytax-Highlight
 author: xinchoubiology
 version: About the sytax highlight in my Blog
-prev_section: LaTex-plugin
-categories: [release]
+next_section: LaTex-plugin
+categories: [Webdev & Tools]
 ---
 
 我们基于Mac OSX的brew库，获得对Jekyll的语法高亮支持：

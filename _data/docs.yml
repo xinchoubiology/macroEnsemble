@@ -1,5 +1,8 @@
 - title: History
   docs:
   - home
-  - quickstart
   - history
+
+- title: Genomics
+  docs:
+  - masterdissertation
