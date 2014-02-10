@@ -16,7 +16,7 @@ Title. 原文链接如下：<a href="{{site.baseurl}}/assets/MasterDissertation.
 ShwinGen [*Short window-based Genotyping webtool*],是我们在Research中使用局部采样的方法来完成基因组全局特征描述的一个新框架。这个工作初期的需求本
 来只是想要做一个简单的HBV[Hepatitis B Virus] RT Region的测序分型工作基于HBV的RT Region。但是，在初步分析之后，我发现一个实际上的HBV基因组序列存在着序列结构上的保守性:
 <div>
-	<img src="{{site.baseurl}}/img/hbv_circos.svg" width="300" height="300" style="float:left;">
+	<img src="{{site.baseurl}}/img/hbv_circos.svg" width="300" height="300" style="float:left;" type="image/svg+xml">
 	基于NCBI的<a href="http://www.ncbi.nlm.nih.gov/nuccore">nuccore</a>数据库得到了我们做HBV特征分析的原始文本。我们基于获得的HBV全基因组序列和
 	基于全长的<a href="http://newbioafrica.mrc.ac.za/rega-genotype/">REGA</a> Genotyping 方法. 我获得了对HBV不同subtype代表的全基因组上的各个<a href="http://en.wikipedia.org/wiki/Open_reading_frame">ORF(Open Reading Framework)</a>的具体定位信息: 从<a style="color:#FFCC00">黄</a>到<a style="color:#FF66FF">红</a>代表了HBV circular Genome上,从Polymerase Region 到 core Region 不同ORF的相互发生overlap的具体区域。
 </div>
