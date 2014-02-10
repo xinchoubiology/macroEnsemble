@@ -77,7 +77,9 @@ $$
 
 小区间可以表征不同的subtype之间的差异，同时这个差异足够显著来帮助我们确定HBV 病毒血清对应的亚型归属。也就证明了我们确实可以通过少量的位点信息来对病人的血清样本进行分型工作了。`:)`
 
-This article aims to briefly introduce the main idea generated my `ShwinGen Framework`. I have hide a lot of details in our theorism anlysis and the actual implementation of CHB patients' serum virus subtype classification. In addition, you can read my master dissertation form these and here is the silde of my final defence. `:)` <a href="{{site.baseurl}}/assets/Final_Defence.pdf">[The slide of final defence...]</a>
+This article aims to briefly introduce the main idea of my `ShwinGen Framework`. I have jumped over a lot of details in my theoretic anlysis and the actual implementation of CHB patients' serum virus subtype classification. In addition, you can read my master dissertation form these and here is the silde of my final defence. `:)` <a href="{{site.baseurl}}/assets/Final_Defence.pdf">[The slide of final defence...]</a>
+
+
 
 
 
