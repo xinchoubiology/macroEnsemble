@@ -6,6 +6,7 @@ permalink: /news/Sytax-Highlight
 author: xinchoubiology
 version: About the sytax highlight in my Blog
 next_section: LaTex-plugin
+prev_section: ShwinGen
 categories: [Webdev & Tools]
 ---
 
