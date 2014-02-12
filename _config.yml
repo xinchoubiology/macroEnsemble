@@ -7,4 +7,10 @@ permalink: pretty
 excerpt_separator: noifniof3nioaniof3nioafafinoafnoif
 repository: https://github.com/xinchoubiology
 baseurl: http://xinchoubiology.github.io/macroEnsemble
+analytics: 
+  provider: google
+  google: 
+    tracking_id : 'UA-48006636-1'
+
+
 

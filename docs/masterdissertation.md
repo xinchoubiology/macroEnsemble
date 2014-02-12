@@ -69,7 +69,7 @@ $$
 
 在使用Transive-Effect Erase [Method Origin:<a href="http://www.nature.com/nbt/journal/v31/n8/full/nbt.2657.html">Network Cleanup</a>] 之后的位点相关矩阵仍然表明，大部分位点是显著Correlated的，如此以来，我们的焦点就被聚焦在了剩下的这10% 看似独立的Locus上了，只需要考虑这352个没有被完全包含到强相关联的大色块里面的位点，应当就可以完全的表征出不同的subtype之间的Difference了，也就可以完成分型工作。
 
-既然如此，我们找的这些位点总结起来就是：一些 Locus Subset，内部自然是抢关联，越强越好，越强我们用的也就越少； 不同的Locus subset之间的关联则是越小约好，尽可能的independent。所以，我们不妨就把实际上的不同的,’独立的‘这些subset当作是Genome Evolution过程中，产生的独立信源，如此一来，问题就被可以模型化成标准的<a href="http://en.wikipedia.org/wiki/Independent_component_analysis">ICA问题</a>，不同的位点带来的正交的进化信息被记录在了Genome的不同Locus上，于此同时，还可以发现，实际上不同的信源，应该就是代表者不同的HBV subtype，这样一来，我们不仅可以通过少量位点确定出来实际的HBV subtype，同时，还可以完成对不同subtype发生测序过程中 recombination chimera error的检测。因为不同的Eigen-segment表征的subtype是独立的。
+既然如此，我们找的这些位点总结起来就是：一些 Locus Subset，内部是表示的是强关联(同时也是highly conserved的区间)，越强越好，越强我们用的也就越少； 不同的Locus subset之间的关联则是越小约好，尽可能的independent。所以，我们不妨就把实际上的不同的,’独立的‘这些subset当作是Genome Evolution过程中，产生的独立信源，如此一来，问题就被可以模型化成标准的<a href="http://en.wikipedia.org/wiki/Independent_component_analysis">ICA问题</a>，不同的位点带来的正交的进化信息被记录在了Genome的不同Locus上，于此同时，还可以发现，实际上不同的信源，应该就是代表者不同的HBV subtype，这样一来，我们不仅可以通过少量位点确定出来实际的HBV subtype，同时，还可以完成对不同subtype发生测序过程中 recombination chimera error的检测。因为不同的Eigen-segment表征的subtype是独立的。
 
 <div align="center">
 	<img src="{{site.baseurl}}/img/ICA_Classification.png" width="290" height="200" style="float:center" ALT="ICA decompose matrix's icvalue to each icvector">
