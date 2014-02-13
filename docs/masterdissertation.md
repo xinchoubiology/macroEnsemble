@@ -2,6 +2,7 @@
 layout: docs
 title: ShwinGen Framework
 prev_section: home
+next_section: SNF
 permalink: /docs/masterdissertation/
 ---
 
