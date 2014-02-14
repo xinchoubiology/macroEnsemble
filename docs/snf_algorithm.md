@@ -2,6 +2,7 @@
 layout: docs
 title: SNF &bull; Algorithm
 prev_section: snf_intro
+next_section: snf_code
 permalink: /docs/snf_algo/
 ---
 

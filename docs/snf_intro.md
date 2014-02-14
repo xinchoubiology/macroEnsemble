@@ -6,6 +6,8 @@ next_section: snf_algo
 permalink: /docs/snf_intro/
 ---
 
+>**引子** . . .
+
 今天看到 Williams 在 Twitter 抛了一篇文章： 
 
 > <a href="http://dl.acm.org/citation.cfm?id=1743546.1743569">Conference paper selectivity and impact</a>
@@ -17,7 +19,7 @@ erase 这个坑不提`:-)`,我今天主要说说最新一期的 Nature method �
 
 下面进入主题:
 
-1, 引子:<br>
+1, 背景:<br>
 &nbsp;&nbsp;以TCGA(The Cancer Genome Atlas)为例，现在的Biology Dataset 已经收集大量不同病人的 Genomics(基因组), Transcriptome(转路组), Epigenome(表观遗传组)的数据了。把这些数据整合起来，显然有利于我们对生物问题本身Heterogeneity 的区分。例如更好的区别不同的Cancer...But,目前这些数据整合分析方法存在的几个Key Barriers:
 
 > 其实这本质上还是一个分类问题，我们不断的检测不同 type的 data,目的就是为了能够获得对不同sample的更好的category。
