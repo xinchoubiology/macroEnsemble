@@ -43,7 +43,7 @@ $$\epsilon_{i,j} = \frac{mean(\rho(x_{i}, N_{i})) + mean(\rho(x_{j}, N_{j})) + \
 
 &nbsp;&nbsp; 设D是对角阵, $$D(i, i) = \sum_{j}{W(i, j)}$$, 那么标准化矩阵 $$P＝D^{-1}W$$。如此，我们保证了rowsum &rarr; $$\sum_{j}{P(i, j)} = 1$$。
 
-同时，为了消除自相似带来的<a href="http://en.wikipedia.org/wiki/Numerical_stability">数值不稳定性</a>, 我们对P进行稍微的修改。防止了如果self-similariity >> other similarity的情况。
+同时，为了消除自相似带来的<a href="http://en.wikipedia.org/wiki/Numerical_stability">数值不稳定性</a>, 我们对P进行稍微的修改。防止了如果self-similariity $$\gg$$ other similarity的情况。
 
 $$
 P(i, j) = \left\{
