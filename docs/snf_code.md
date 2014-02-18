@@ -34,6 +34,9 @@ SNFtool code/
 
 安装 R package ：`R CMD INSTALL pkg` <br>
 
+我又重新写了SNFtools 的python 版本: <a href="https://github.com/xinchoubiology/SNFtools">SNFtools</a>
+具体代码细节见我的github repository `:)`
+
 
 
 

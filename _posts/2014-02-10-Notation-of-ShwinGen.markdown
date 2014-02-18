@@ -6,6 +6,7 @@ permalink: /news/ShwinGen
 author: xinchoubiology
 version: ShwinGen's Brain Storm
 next_section: Sytax-Highlight
+prev_section: setup-Py
 categories: [Genomics]
 ---
 
