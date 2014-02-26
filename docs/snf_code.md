@@ -2,6 +2,7 @@
 layout: docs
 title: SNF &bull; Code
 prev_section: snf_algo
+next_section: rnd_grn
 permalink: /docs/snf_code/
 ---
 ## Code Archive . . .

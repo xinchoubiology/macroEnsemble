@@ -7,11 +7,12 @@
   docs:
   - masterdissertation
 
-- title: Journal Review
+- title: Network Prediction
   docs:
   - snf_intro
   - snf_algo
   - snf_code
 
-
-
+- title: Gene Regulation Network
+  docs:
+  - rnd_grn
