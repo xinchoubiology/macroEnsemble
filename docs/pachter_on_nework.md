@@ -5,7 +5,7 @@ prev_section: snf_code
 permalink: /docs/discuz_grn/
 ---
 
-> 此翻译尚未授权，Just pre-print as an draft, 我正在和Pachter教授联系 ... 
+> 此翻译尚未授权，Just pre-print as a draft, 我正在和Pachter教授联系 ... 
 
 > 引子 :<br>
 Pachter 教授就2013年8月份在nbt的一个关于 ' Network cleanup ' 的专题中报道的两篇文章做了一个评论，文中很多观点这两天都让我meditate
@@ -62,6 +62,29 @@ $S=I-D(1/G^{-1})G^{-1}$&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &n
 $G = (S-I)^{-1} D(1/(S-I)^{-1} )$&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; (5)
 
 有了公式(5)的话，我们很容易从局部扰动矩阵S来推断全局扰动矩阵G，换句话说，我们<em>不需要像Barzel & Barabási那样借助米氏动力学方程的模拟来对他们研究方法的工作性能进行评估。。同时用(4)我们可以有效的模拟数据。</em>
+
+而使用米氏动力学模拟的一个问题是，虽然这么干对于酶动力学网络来说更有意义，但反过来说，对于调控网络这就显得没那么有意义了(了解更多请看Karlebach, G. & Shamir, R. 文章 <a href="http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CCoQFjAA&url=http%3A%2F%2Fwww.researchgate.net%2Fpublication%2F23263890_Modelling_and_analysis_of_gene_regulatory_networks%2Ffile%2F79e4150e41bf450e40.pdf&ei=XAz4UoPXOcnjoATk3oGoDw&usg=AFQjCNEtQSVc8z-HWilrI-C8_bVOGym2jg&sig2=20HdWqvwFrKc-SVdxTy8cg&bvm=bv.60983673,d.cGU">Modelling and analysis of gene regulatory networks</a>,Nat Rev Mol Cell Biol 9, 770–780 (2008)), 但是，无论在哪一个例子里面，这种动力学模拟都很难称得上是对(2)的有效验证。因为，本质上，他们就是之间可以被认为是无关的。那么，当一个人通过 Barzel-Biham模拟数据然后试图恢复参数的时候，究竟发生了什么？
+
+<div align="center">
+	<img src="{{site.baseurl}}/img/bb_res.jpg" width="500" height="450" ALT="方法对比分析AUROC">
+	<p>对比图: 正则化偏相关标准方法 v.s. Barzel-Biham 模型准确推断。 随机稀疏图是通过 Erdös-Renyi 图模型G(5000, p)生成的，这里p作为不同的图密度，也是图中的X坐标，而y坐标则是描述了不同方法的<a href="http://en.wikipedia.org/wiki/Receiver_operating_characteristic">AUROC</a>, AUROC基于75轮的随机试验获得</p>
+</div>
+
+从上图我们可以看出，当我们检测Barzel-Biham模型对5000节点E.R 图的模拟结果时，我们惊讶地发现，Barzel-Biham模型的方法时对噪音高度敏感的: 当我们网E.R图中引入少量噪音的时候，“精确算法”(4)已经无法从全局响应矩阵G中恢复出局部响应矩阵S (我们同样方法也分析了方程(3), 发现他的表现比(4)还差)。而这个方法对于噪音之所以敏感，是因为其中的$$D(1/G^{-1})$$项的结果在当$$G^{-1}$$的对角阵趋于0时候是<b>有问题的</b>。
+
+当我们研究$$G^{-1}$$的行为的时候，我们可以从观测$$S$$的等比数列是否是收敛的这个信息来研究之。我们注意到，$$G^{-1}$$的对角阵实际上满足
+$$Diag(G^{-1}) = I + S + S^{2} + S^{3} + ... $$, 如果S有混合标识或者在网络里有重要的反馈的话，$$G^{-1}$$的对角阵就可能会接近0，同时在G检测
+中的任何噪音都有可能会导致推断S中巨大的波动。这也就意味着，实际上Figure.1中的结果并不是依赖于图模型的选择,无论是ER model, 还是任何一种包含enhancer 和 repressor的转录调控网络，Barzel-Biham模型对于噪音的抵抗能力都比较弱。但是，在Barzel & Barabási文章中的Fig2a我们看到, Barabási在模拟S的时候，只排除了在网络中的负效果作用，这显然与转录调控网络的实际情况是不一致的。也就是说，他们的假设，在生物学意义上是不真实的。
+
+然而，Barzel-Biham模型中的这个关于噪音的难题还会有更多的影响，
+
+
+
+
+
+
+
+
 
 
 
