@@ -76,7 +76,51 @@ $G = (S-I)^{-1} D(1/(S-I)^{-1} )$&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
 $$Diag(G^{-1}) = I + S + S^{2} + S^{3} + ... $$, 如果S有混合标识或者在网络里有重要的反馈的话，$$G^{-1}$$的对角阵就可能会接近0，同时在G检测
 中的任何噪音都有可能会导致推断S中巨大的波动。这也就意味着，实际上Figure.1中的结果并不是依赖于图模型的选择,无论是ER model, 还是任何一种包含enhancer 和 repressor的转录调控网络，Barzel-Biham模型对于噪音的抵抗能力都比较弱。但是，在Barzel & Barabási文章中的Fig2a我们看到, Barabási在模拟S的时候，只排除了在网络中的负效果作用，这显然与转录调控网络的实际情况是不一致的。也就是说，他们的假设，在生物学意义上是不真实的。
 
-然而，Barzel-Biham模型中的这个关于噪音的难题还会有更多的影响，
+然而，Barzel-Biham模型中的这个关于噪音的难题还会有更多的影响，首先，如果在实验中假设系统的偏差模型是一个为常数的信噪比，那么一个很重要的问题就是<em>没有一个实验可以直接检测G矩阵中的元素。</em> 获得$$G_{ij}$$的方法就是对基因$i$做一个大小为$e$扰动，然后观测基因$j$的变化，再对这个变化除以$e$, 最后这一步把$G_{ij}$检测中的噪音增大了$\frac{1}{e}$倍(这个对检测中固有噪音的放大程度还是有点大的)，对基因扰动程度的增长，会导致对G矩阵估计的错误也增加。所以，这也就是为什么Barzel-Biham模型要得到较低的G的错误估计需要原始数据的低噪音.而对于生物调控网络来说，这就意味着我们需要多次实验重复。然而，在Barzel & Barabási的文章中，甚至没有实验一次重复扰动实验。
+
+更加重要的是，在发现 Barzel-Biham model 表现很差之外，我们还发现，一个被广泛运用的基于偏相关的岭估计方法(Schäfer, J. & Strimmer, K. <a href="http://uni-leipzig.de/~strimmer/lab/publications/journals/shrinkcov2005.pdf">A Shrinkage Approach to Large-Scale Covariance Matrix Estimation and Implications for Functional Genomics</a>, Statistical Applications in Genetics and Molecular Biology 4, (2005)) 在DIrect linkage predict方面的表现远远的好过方程(4)中的模型，这也暗示这里的方程(4)其实没啥用。。这个方法甚至不适合用来估计这个方法自己生成的数据。
+
+我们继续都到文章的"结果"部分，为了说明他们这个“沉默者”方法的有效，网络皇帝仅仅跑了跑<a href="http://www.the-dream-project.org/category/challengesdream/dream5">DREAM DATA</a>三个数据集中的一个例子就结束了。。而且，他也只是把自己的silencer方法和DREAM 5的Benchmark中包含的35中方法中的3种方法进行了对比。还有，Barzel & Barabási文章做的是基于网络扰动实验的分析，但是作者们做方法比较的时候却是从互信息，相关系数等方面来比较这些方法的Performance。。结果如下图所示: ［P.S 这里我并不十分同意帕教授的说法，不同的域来描述network的恢复情况我觉得是可行的，但是如何做到扰动则是一个问题。］
+
+<div align="center">
+	<img src="{{site.baseurl}}/img/barzel-barabasi_figure.jpg" width="500" height="200" ALT="结果图">
+	<p>Barzel & Barabási 结果图</p>
+</div>
+
+但是Barzel & Barabási 在文中进行比较的三个方法，他们在DREAM benchmark中各自在与实际结果相关系数，互信息的得分排名排名都不是很高，各自Pearson 和 Spearman 相关的排名在35种方法中只是占据 16 和 18名，也就是说，作者提出highlight的方法没有和最好的方法进行比较。这可能才是为什么本文的方法在与"这些方法"比较之后表现最好的原因: 实际上，如果全局扰动矩阵G是相关矩阵的话，本文给出的路径解释结合上Seawall Wright的路径参数的推导过程(ca 1920), 实际上就是偏相关。
+
+另外，在互信息的检测种，作为一个在35种方法种排第19的方法，我们也认为没有什么统计显著性。如此一来，我们可以这么说，网络皇帝把一个在DREAM BENCHMARK中效果排名16/35的方法称为"顶级的"方法， 至少，这是不合适的。。
+
+那么，我们不得不问：为啥Barabási就可以在NBT上发表一篇对仅仅是无聊的DREAM数据的网络预测都几乎没有任何提升的Paper呢？
+
+把他们的文章放到我们的这个"帕三篇"中看的话，后面被我们骂的狗血喷头的Feizi et al那篇文章至少相比网络皇帝这篇文章还有一个可取之处：他们把自己的方法在3个数据集，与9种方法都进行了比较(设置还使用了基于社区的方法)。所以，我们认为，如果想要证明 Silencer这个方法在网络推断上确实有提高的话，至少还需要更多的验证实验。只有这样的评价标准才是。
+
+所以, 到现在为止，我们也没有看到任何合适的关于Barzel-Biham model 的实际应用（可能除了这个子网络扰动实验之外)。与此同时，我们也不相信这个模型适用于那些需要容忍噪音问题的实验。
+
+还有更不幸的事，伟大的作家们: Barzel, Baruch, and Albert-László Barabási 之后， 又在 Nature Physics 上在这个问题上继续钻牛角尖下去了(P.S. 译者认为，这是好事儿阿上`=_=`): "<a href="http://www.nature.com/nphys/journal/v9/n10/abs/nphys2741.html">Universality in Network Dynamics</a>"。在这个Paper里面，他们继续讨论了局部响应矩阵$$S$$, 同时，矩阵S种所有的元素都是正数。也可以理解为: 例如在转录调控网络里面，负调控就没有了。(P.S. 这里译者也有疑问，如帕教授所言的话，这里要求对应的响应矩阵必须是相关矩阵了，如果是其他类型的响应矩阵的话，是否可以保证矩阵中的所有元素为正？) 
+
+而在Barabási的这篇文章中，实际上，这种约束直接影响了方法对应的结果。可是这样的结果，从生物学显著性上来说，毫无意义。更何况，如果是使用方程(5)来推算G的话，这个被加在S上的约束也是毫无必要的。考虑到这些直接原因，我们不得不怀疑在读“Universality in Network Dynamics”这篇文章还是否有意义，否则，这篇Blog就太长了。
+
+当然，这也不是Barabási 第一次在 N/S 系列杂志上发表一篇包含大量无关和不一致的结果。事实上，Barabási干这方面倒是是很久,而且还总能投到顶级期刊。
+
+Barabási 这几年被发现的问题：
+1,	其有名的 BA model, 但是其数学模型早就建立了。
+2,	对其 metabolic networks 是 scale-free 还是不是 scale－free的分析。
+3,	John Doyle 拒绝文章 Error and attack tolerance of complex networks。
+4,	“The origin of bursts and heavy tails in human dynamics” 这篇文章中，皇帝假装观测了人类行为爆发现象，但是基于的模型是人工数据，但是对于实际数据，是不满足power－law分布的。
+5，      （P.S. 我最爱的一篇文章，不过终究说来，体现的不过是我的愚蠢傀儡属性罢了），“Controllability of complex networks”, 作者说，稀疏的不均匀网络，难以被控制，繁殖，密集的均匀网络，易于控制。但是，实际上，不是这样的。。<a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0038398">请看这篇漂亮而强有力的反驳(Nodal Dynamics, Not Degree Distributions, Determine the Structural Controllability of Complex Networks)</a>,  Carl Bergstrom 和他的同事们展示了在PDS(Power Dominating Set)问题上，单一控制输入就是大多数这类图的的所需的结构控制。而我之前，在"Finite decimal expansion, infinite time constants and structural controllability of networks"这篇博客里面，也详细的介绍了Carl Bergstrom 的工作，以及为什么他的工作让Barabási的文章显得是控制论的"耻辱"。
+
+换句话说吧，我们都知道，Barabási的工作就是Nature and Science 期刊里面的一个专栏。。尽管我们也知道，许多的杰出科学家也已经证明了这位网络皇帝其实是在"裸奔"。。
+
+最后一句：在这篇我们讨论的nbt paper中， Barzel and Barabási发表评论说：<a href="http://www.northeastern.edu/news/2013/07/barzel/">“这个工作让研究组更加的接近理解，预测和控制人类疾病”</a>, 现在看来，他们真应该是 <a href="http://www.michaeleisen.org/blog/?p=1516"> Michael Eisen’s pressies奖</a>的优秀候选人阿。。(毒舌毒死了。。。)
+
+
+
+
+
+
+
+
 
 
 
