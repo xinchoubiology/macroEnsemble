@@ -105,15 +105,15 @@ $$Diag(G^{-1}) = I + S + S^{2} + S^{3} + ... $$, 如果S有混合标识或者在
 
 Barabási 这几年被发现的问题：
 
-* 其有名的 BA model, 但是其数学模型早就建立了。
+*  其有名的 BA model, 但是其数学模型早就建立了。
 
-* 对其 metabolic networks 是 scale-free 还是不是 scale－free的分析。
+*  对其 metabolic networks 是 scale-free 还是不是 scale－free的分析。
 
-* John Doyle 拒绝文章 Error and attack tolerance of complex networks。
+*  John Doyle 拒绝文章 Error and attack tolerance of complex networks。
 
-* “The origin of bursts and heavy tails in human dynamics” 这篇文章中，皇帝假装观测了人类行为爆发现象，但是基于的模型是人工数据，但是对于实际数据，是不满足power－law分布的。
+*  “The origin of bursts and heavy tails in human dynamics” 这篇文章中，皇帝假装观测了人类行为爆发现象，但是基于的模型是人工数据，但是对于实际数据，是不满足power－law分布的。
 
-* (P.S. 我最爱的一篇文章，不过终究说来，体现的不过是我的愚蠢傀儡属性罢了），“Controllability of complex networks”, 作者说，稀疏的不均匀网络，难以被控制，繁殖，密集的均匀网络，易于控制。但是，实际上，不是这样的。。<a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0038398">请看这篇漂亮而强有力的反驳(Nodal Dynamics, Not Degree Distributions, Determine the Structural Controllability of Complex Networks)</a>,  Carl Bergstrom 和他的同事们展示了在PDS(Power Dominating Set)问题上，单一控制输入就是大多数这类图的的所需的结构控制。而我之前，在"Finite decimal expansion, infinite time constants and structural controllability of networks"这篇博客里面，也详细的介绍了Carl Bergstrom 的工作，以及为什么他的工作让Barabási的文章显得是控制论的"耻辱"。
+*  (P.S. 我最爱的一篇文章，不过终究说来，体现的不过是我的愚蠢傀儡属性罢了），“Controllability of complex networks”, 作者说，稀疏的不均匀网络，难以被控制，繁殖，密集的均匀网络，易于控制。但是，实际上，不是这样的。。<a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0038398">请看这篇漂亮而强有力的反驳(Nodal Dynamics, Not Degree Distributions, Determine the Structural Controllability of Complex Networks)</a>,  Carl Bergstrom 和他的同事们展示了在PDS(Power Dominating Set)问题上，单一控制输入就是大多数这类图的的所需的结构控制。而我之前，在"Finite decimal expansion, infinite time constants and structural controllability of networks"这篇博客里面，也详细的介绍了Carl Bergstrom 的工作，以及为什么他的工作让Barabási的文章显得是控制论的"耻辱"。
 
 换句话说吧，我们都知道，Barabási的工作就是Nature and Science 期刊里面的一个专栏。。尽管我们也知道，许多的杰出科学家也已经证明了这位网络皇帝其实是在"裸奔"。。
 
