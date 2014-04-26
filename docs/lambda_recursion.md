@@ -563,6 +563,14 @@ Over
 
 4. [Fixed-point_combinator](http://en.wikipedia.org/wiki/Fixed-point_combinator)
 
+5. [Lambda Calculus](http://en.wikipedia.org/wiki/Lambda_calculus)
+
+6. [Pure Lambda Calculus](http://www.cse.iitd.ac.in/~saroj/LFP/LFP_2013/L17.pdf) 
+
+7. [使用 Lambda 表达式编写递归](http://www.cnblogs.com/ldp615/archive/2013/04/09/recursive-lambda-expressions-1.html)
+
+。。。 Ref 我也是瞎寫的，反正東看看西看看了。。。WTF，其實Y-combinator似乎還是最簡單的一種Fix function
+
 
 
 
