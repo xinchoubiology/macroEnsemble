@@ -16,3 +16,7 @@
 - title: Gene Regulation Network
   docs:
   - discuz_grn
+
+- title: Lambda Calculus
+  docs:
+  - lambda_recursion

@@ -2,22 +2,23 @@
 layout: docs
 title: Pachter's comment on 2 nbt paper &bull; 翻译
 prev_section: snf_code
+next_section: lambda_recursion
 permalink: /docs/discuz_grn/
 ---
 
-> 此翻译尚未授权，Just pre-print as a draft, 我正在和Pachter教授联系 ... 
+> 此翻译尚未授权，Just pre-print as a draft, 我正在和Pachter教授联系 ...
 
 > 引子 :<br>
 Pachter 教授就2013年8月份在nbt的一个关于 ' Network cleanup ' 的专题中报道的两篇文章做了一个评论，文中很多观点这两天都让我meditate
 很久，自己似乎走在错误的道路上越来越远，如当头棒喝。Prof. Pachet 评论的两篇文章都是我今年最感兴趣的两篇NBT paper。出于自己的个人趣味，我还不断的把这两篇文章推荐给别人。。。But，I realized I am totally wrong and feel sorry about that.
 
 
-### Post 1 &bull;  The network nonsense of Albert-László Barabási 
+### Post 1 &bull;  The network nonsense of Albert-László Barabási
 
 ### Albert-László Barabási 的那篇网络文章是扯淡 !!
 
 Nature Biotechnology 杂志，2013年8月刊, 以背靠背的形式发表了两篇网络领域的理论文章：
-	
+
 * 1, Baruch Barzel & Albert-László Barabási, <a href="http://www.nature.com/nbt/journal/v31/n8/abs/nbt.2601.html">Network link prediction by global silencing of indirect correlations</a>, Nature Biotechnology 31(8), 2013, p 720–725. doi:10.1038/nbt.2601.
 
 * 2, Soheil Feizi, Daniel Marbach, Muriel Médard & Manolis Kellis, <a href="http://www.nature.com/nbt/journal/v31/n8/abs/nbt.2635.html">Network deconvolution as a general method to distinguish direct dependencies in networks</a>, Nature Biotechnology 31(8), 2013, p 726–733. doi:10.1038/nbt.2635.
@@ -97,7 +98,7 @@ $$Diag(G^{-1}) = I + S + S^{2} + S^{3} + ... $$, 如果S有混合标识或者在
 
 所以, 到现在为止，我们也没有看到任何合适的关于Barzel-Biham model 的实际应用（可能除了这个子网络扰动实验之外)。与此同时，我们也不相信这个模型适用于那些需要容忍噪音问题的实验。
 
-还有更不幸的事，伟大的作家们: Barzel, Baruch, and Albert-László Barabási 之后， 又在 Nature Physics 上在这个问题上继续钻牛角尖下去了(P.S. 译者认为，这是好事儿阿上`=_=`): "<a href="http://www.nature.com/nphys/journal/v9/n10/abs/nphys2741.html">Universality in Network Dynamics</a>"。在这个Paper里面，他们继续讨论了局部响应矩阵$$S$$, 同时，矩阵S种所有的元素都是正数。也可以理解为: 例如在转录调控网络里面，负调控就没有了。(P.S. 这里译者也有疑问，如帕教授所言的话，这里要求对应的响应矩阵必须是相关矩阵了，如果是其他类型的响应矩阵的话，是否可以保证矩阵中的所有元素为正？) 
+还有更不幸的事，伟大的作家们: Barzel, Baruch, and Albert-László Barabási 之后， 又在 Nature Physics 上在这个问题上继续钻牛角尖下去了(P.S. 译者认为，这是好事儿阿上`=_=`): "<a href="http://www.nature.com/nphys/journal/v9/n10/abs/nphys2741.html">Universality in Network Dynamics</a>"。在这个Paper里面，他们继续讨论了局部响应矩阵$$S$$, 同时，矩阵S种所有的元素都是正数。也可以理解为: 例如在转录调控网络里面，负调控就没有了。(P.S. 这里译者也有疑问，如帕教授所言的话，这里要求对应的响应矩阵必须是相关矩阵了，如果是其他类型的响应矩阵的话，是否可以保证矩阵中的所有元素为正？)
 
 而在Barabási的这篇文章中，实际上，这种约束直接影响了方法对应的结果。可是这样的结果，从生物学显著性上来说，毫无意义。更何况，如果是使用方程(5)来推算G的话，这个被加在S上的约束也是毫无必要的。考虑到这些直接原因，我们不得不怀疑在读“Universality in Network Dynamics”这篇文章还是否有意义，否则，这篇Blog就太长了。
 
@@ -105,7 +106,7 @@ $$Diag(G^{-1}) = I + S + S^{2} + S^{3} + ... $$, 如果S有混合标识或者在
 
 Barabási 这几年被发现的问题：
 
-*  其有名的 BA model, 但是其数学模型早就建立了。
+* 其有名的 BA model, 但是其数学模型早就建立了。
 
 *  对其 metabolic networks 是 scale-free 还是不是 scale－free的分析。
 
@@ -119,41 +120,8 @@ Barabási 这几年被发现的问题：
 
 最后一句：在这篇我们讨论的nbt paper中， Barzel and Barabási发表评论说：<a href="http://www.northeastern.edu/news/2013/07/barzel/">“这个工作让研究组更加的接近理解，预测和控制人类疾病”</a>, 现在看来，他们真应该是 <a href="http://www.michaeleisen.org/blog/?p=1516"> Michael Eisen’s pressies奖</a>的优秀候选人阿。。(毒舌毒死了。。。)
 
+### Post 2 &bull;  The network nonsense of Manolis Kellis
 
+### 第二篇 Manolis Kellis 更加是在扯淡！！！
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+上一篇我们讨论了Barzel & Barabási 的文章，那篇文章的问题总结下来就是，数学过于白痴，验证过于扯淡，结果又过于贫乏。然而，和Kellis的这篇文章比起来，网络皇帝的文章相对来说是更好的一篇了。这是以为， Soheil Feizi, Daniel Marbach, Muriel Médard & Manolis Kellis 写的这篇文章，
