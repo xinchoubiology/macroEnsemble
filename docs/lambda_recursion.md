@@ -181,7 +181,8 @@ $$
 這是一個「自反」，「對稱」，「傳遞」的過程(這個證明還是容易的)，自然了，這就是我們說的等價關係了。
 
 順便，從$\alpha$ 等價關係中我們可以得到一個關於替換裏面的解釋：
-	+ if $M \equiv_{\alpha} M'$, $N \equiv_{\alpha} N'$, 我們可以得到：$[N/x]M \equiv_{\alpha} [N'/x]M'$
+
+if $$ M \equiv_{\alpha} M'$, $N \equiv_{\alpha} N'$, 我們可以得到：$[N/x]M \equiv_{\alpha} [N'/x]M' $$
 
 從上面這個推論，證明了我們在之前尋找z替換ovrlaped FV的lambda term的原因了。
 
