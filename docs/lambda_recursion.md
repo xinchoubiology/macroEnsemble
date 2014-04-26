@@ -6,7 +6,7 @@ permalink: /docs/lambda_recursion/
 ---
 
 > 緣起 - 還是要從最近玩的一個比較有意思的Toy說起，[『DrRacket』](http://docs.racket-lang.org/drracket/), 涉及到兩個叠代的繪圖 `procedure`,
-	而我希望做的工作就是對這兩個叠代split `procedure` 函數做一個 high-order abstraction。
+	而我希望做的工作就是對這兩個叠代split `procedure` 函數做一個 high-order abstraction。其實對於瞭解Y-combinator的來說，一拉到底爺就可以了，最後有個關於lambda recursion基於Y-combinator的實現。
 
 首先，我得到四種遞歸畫圖的`procudure`, 他們分別被命名為：`right-split`,	 `up-split`, 	`left-split`,	`down-split`, 代表圖像叠代的方向是identity picture的上，下，左，右四個方位。下面我寫出具體的代碼和示意圖來作為演示。[後面我們會明白之所以使用這種繪圖函數來作為這個問題的引子，是因為其本身具有的閉包(closure)屬性]
 
@@ -171,7 +171,7 @@ $$
 
 * $\alpha$ 變換和等價：
 
-之前的subtitution 都是針對於 free variable而作的，我們還希望能夠改變bound variable， such as $x in \lambda x. M$, 設一個y，$y \notin FV(M)$
+之前的subtitution 都是針對於 free variable而作的，我們還希望能夠改變bound variable， such as $x\ in\ \lambda x. M$, 設一個y，$y \notin FV(M)$
 如此，我們可以得到下面這個$\alpha 全等$表達：
 
 $$
