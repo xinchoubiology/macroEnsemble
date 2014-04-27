@@ -249,10 +249,13 @@ $$
 	+ CL-term 寫作  `[x].M` ：= $T[\lambda x. M]$;
 	+ $[x].M = KM $ ,  If $x \notin FV(M)$;
 	+ $[x].M = \lambda x. x = I $
-	+ $[x].(UV) $\rightarrow S([x].U)([x].V)$
+	+ $[x].(UV) \rightarrow S([x].U)([x].V) $
 
 * Exercise: 
-	+ $[x].u(vx) \rightarrow S([x].u)([x].vx) = S(Ku)(S([x].v)([x].x)) = S(Ku)(S(Kv)I)$	
+$$
+[x].u(vx) \rightarrow S([x].u)([x].vx) = S(Ku)(S([x].v)([x].x)) \\ 
+= S(Ku)(S(Kv)I)
+$$
 
 * Define ： $[x_1, ... x_n]. M = [x_1].([x_2].(...([x_n].M)...)) $ 
 
@@ -423,10 +426,10 @@ Usage：
 
 先定義 $\beta \ reduction$，如果 $$P \equiv_{\beta} Q $$, 那麽我們就可以說，當且僅當P可以在有限的步驟（也可以是0）內  $$\vartriangleright_{n\beta}$$ 到 Q，或者是進行 $$\alpha \ transform $$  到Q。
 
-如此，我們可以考慮一個Y combinator： $\lambda f. ((\lambda x. g(x\ x)) lambda x. g(x\ x))$, 有了這個Y-combinator之後的話，我們可以發現：
+如此，我們可以考慮一個Y combinator： $\lambda f. ((\lambda x. g(x\ x)) \lambda x. g(x\ x))$, 有了這個Y-combinator之後的話，我們可以發現：
 
 $$
-	YF = (\lambda f. ((\lambda x. g(x\ x)) lambda x. g(x\ x)))F \\
+	YF = (\lambda f. ((\lambda x. g(x\ x)) \lambda x. g(x\ x)))F \\
 	=     (\lambda x. F(x\ x))\ (\lambda x. F(x\ x)) \\
 	= F((\lambda x. F(x\ x))\  (\lambda x. F(x\ x)) ) \\
 	= F(YF)
@@ -439,7 +442,7 @@ $$
 	g \equiv \lambda f. \lambda n. (if (= \ n\ 0) 1 (*\ n\ (f \ (-\ n\ 1))))    \qquad \qquad 單一階乘定義 \\
 	所以我們發現 Y-combinator \ 的幫助下我們可以得到 : \\
 	Yg = g\ Yg  \\
-	所以，Yg\ n = g \ Yg \ n = （* n\ Yg (- n 1)) \\
+	所以，Yg\ n = g \ Yg \ n = (* n\ Yg (- n \ 1)) \\
 $$
 
 
